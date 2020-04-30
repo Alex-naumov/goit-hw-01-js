@@ -2,7 +2,7 @@
 
 const credits = 23500;
 const pricePerDroid = 3000;
-let amount = prompt();
+let amount = prompt("Введите количество дроидов");
 let message;
 let totalPrice;
 let remainder;
@@ -10,7 +10,7 @@ let remainder;
 if (amount === null) {
   message = "Отменено пользователем!";
 } else {
-  totalPrice = pricePerDroid * amount;
+  totalPrice = pricePerDroid * Number(amount);
   if (totalPrice > credits) {
     message = "Недостаточно средств на счету!";
   } else {

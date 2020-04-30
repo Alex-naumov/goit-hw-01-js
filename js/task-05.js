@@ -1,15 +1,12 @@
 "use strict";
 
-let receivedData = prompt().toLowerCase();
+let receivedData = prompt("Введите название страны").toLowerCase();
 let price;
 var country;
 let fragmentReceivedData = "";
 let message;
 
-for (var i = 1; i < receivedData.length; i++) {
-  fragmentReceivedData = fragmentReceivedData + receivedData[i];
-  country = receivedData[0].toUpperCase() + fragmentReceivedData;
-}
+country = receivedData[0].toUpperCase() + receivedData.slice(1);
 
 switch (country) {
   case "Китай":
